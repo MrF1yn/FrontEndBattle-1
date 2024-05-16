@@ -1,0 +1,27 @@
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    padding: 1rem;
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid white;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+    z-index: 9999;
+}
+
+.cursor-inner {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.hover-this:hover ~ .cursor {
+    transform: scale(0.5);
+    background-color: white;
+}
+
+/* .hover-this:hover ~ .cursor-inner {
+    background-color: black;
+} */
